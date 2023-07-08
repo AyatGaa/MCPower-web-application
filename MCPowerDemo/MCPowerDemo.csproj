@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\AcountController1\**" />
+    <Content Remove="Views\AcountController1\**" />
+    <EmbeddedResource Remove="Views\AcountController1\**" />
+    <None Remove="Views\AcountController1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AcountController1.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Privacy.cshtml" />
+    <Content Remove="Views\Shared\_Layout - Copy.cshtml" />
+    <Content Remove="wwwroot\Images\IMG-20230515-WA0008.jpg" />
+    <Content Remove="wwwroot\Images\IMG-20230515-WA0010.jpg" />
+    <Content Remove="wwwroot\Images\IMG-20230515-WA0011.jpg" />
+    <Content Remove="wwwroot\Images\IMG-20230515-WA0012.jpg" />
+    <Content Remove="wwwroot\Images\IMG-20230515-WA0013.jpg" />
+    <Content Remove="wwwroot\Images\IMG-20230515-WA0014.jpg" />
+    <Content Remove="wwwroot\Images\picc.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\IMG-20230515-WA0008.jpg" />
+    <None Include="wwwroot\Images\IMG-20230515-WA0010.jpg" />
+    <None Include="wwwroot\Images\IMG-20230515-WA0011.jpg" />
+    <None Include="wwwroot\Images\IMG-20230515-WA0012.jpg" />
+    <None Include="wwwroot\Images\IMG-20230515-WA0013.jpg" />
+    <None Include="wwwroot\Images\IMG-20230515-WA0014.jpg" />
+    <None Include="wwwroot\Images\picc.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj" />
+  </ItemGroup>
+
+</Project>

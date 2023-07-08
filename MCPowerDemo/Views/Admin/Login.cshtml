@@ -1,0 +1,116 @@
+﻿@model Domain.Entities.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+ <!DOCTYPE html>
+<html>
+<head>
+ 
+  <style>
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-form {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-form">
+      <h1>Log-in</h1>
+      <h4>Admin</h4>
+      <hr />
+
+      <div class="row">
+        <div class="col-md-12">
+          <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+              <label asp-for="Email" class="control-label"></label>
+              <input asp-for="Email" class="form-control" />
+              <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+              <label asp-for="Password" class="control-label"></label>
+              <input asp-for="Password" class="form-control" />
+              <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" value="Log in" class="btn btn-primary" />
+            </div>
+          </form>
+        </div>
+      </div>
+
+    @*  <div>
+        <hr />
+        <a asp-action="Show" asp-route-id="Model.ProductID" class="btn btn-outline-success"><i class="bi bi-skip-backward-fill"></i> Back to List</a>
+        <hr />
+      </div>*@
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+@*
+
+
+
+
+<h1>Login</h1>
+
+<h4>Admin</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+       
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            
+           @* <div class="form-group">
+                <label asp-for="RoleId" class="control-label"></label>
+                <input asp-for="RoleId" class="form-control" />
+                <span asp-validation-for="RoleId" class="text-danger"></span>
+            </div>*@
+@*            <div class="form-group">
+                <input type="submit" value="Log in" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <hr />
+      <a asp-action="Show" asp-route-id="Model.ProductID " class="btn btn-outline-success"> <i class="bi bi-skip-backward-fill"></i> Back to List</a>
+      <hr /> 
+      *@
+   @* <a asp-action="Home" asp-route-id="Model.ProductID" >Back To List</a>*@
+@*</div>
+*@

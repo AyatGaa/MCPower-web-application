@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Domain.Abstractions.Products>
+
+@{
+    ViewData["Title"] = "Show";
+}
+
+<h1>Products </h1>
+@*<style>
+    .pic {
+        vertical-align:middle;
+        width:50%;
+        height : 50%;
+        border-radius:50%;
+    }
+
+</style>*@
+<p>
+    @*<a asp-action="Create">Create New</a>*@
+     <a asp-action="Create" class="btn btn-sm btn-success  m-1"> Add New Product </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProductQuantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+            @*  <img src="e:\2nd term\software development and professional practice - amr\section\sw_c#_projects\mcpowerdemo\mcpowerdemo\images\picc.jpg" />*@
+               @Html.DisplayFor(modelItem => item.ProductId)
+                    
+            </td> 
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+        @*        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                <div class="btn-group">
+                    <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-success m-1"><i class="bi bi-pencil-square"></i> Edit </a>
+                    <a asp-action="Details" asp-route-id="@item.ProductId" class="btn btn-info m-1"><i class="bi bi-bar-chart-steps"></i> Details </a>
+                    <a asp-action="Delete" asp-route-id="@item.ProductId"  class="btn btn-warning m-1"><i class="bi bi-trash3-fill"></i> Delete </a>
+
+                </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

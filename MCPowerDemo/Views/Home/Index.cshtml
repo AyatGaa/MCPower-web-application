@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <style>
+    .logo-container {
+      width: 200px;
+      height: 200px;
+      margin:15px auto;
+      text-align: center;
+      background-color: #f2f2f2;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .logo-image {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+
+    .bullet-list li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .bullet-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: white; 
+    }
+
+    .bullet-list li span {
+      margin-left: 10px;
+    }
+        .about-section {
+      background-color: #002b36;
+      padding: 40px;
+    }
+
+    .about-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color:antiquewhite;
+    }
+
+    .about-section p {
+      font-size: 18px;
+      line-height: 1.5;
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="~/Images/IMG-20230515-WA0010.jpg" alt="MCPOWER" class="logo-image">
+  </div>
+  <div class="text-center">
+    <h1 class="display-3" style="color: ghostwhite;"  >MC Power</h1>
+    <h2 class="texr-center" style="color: white;">  For electrical installations and maintenance</h2>
+   <div class="text-center" style="color:white;">   
+       <ul class="bullet-list"   style=" display: inline-block;">
+    <li  ><span  style="font-size: xx-large; display: inline-block;">Electric motors</span></li>
+    <li  ><span style="font-size: xx-large;">Solar energy systems</span></li>
+    <li  ><span style="font-size: xx-large;">Control panels</span></li>
+  </ul>
+    @* <h3>Electric motors</h3> 
+        <h3> <span >0</span>Solar energy systems</h3>
+        <h3>Control panels</h3>*@
+ 
+   </div>
+  
+    <hr />
+
+
+    <div class="about-section">
+    <h2>About Us</h2>
+
+    <p>MC Power For electrical installations and maintenance</p>
+
+  </div>
+</div>
+</body>
+</html>
